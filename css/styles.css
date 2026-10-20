@@ -1,0 +1,255 @@
+:root {
+  --dark: #333;
+  --dark-hover: #555;
+  --page: #f8f8f8;
+  --card: #fff;
+  --border: #ccc;
+  --error: #b00020;
+  --success: #1b7a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--dark);
+  background-color: var(--page);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: var(--dark);
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .brand {
+  font-size: 1.2rem;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar a:hover,
+.navbar a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Page layout */
+.content {
+  max-width: 900px;
+  margin: 20px auto 40px;
+  padding: 20px;
+  background-color: var(--card);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: var(--dark);
+}
+
+/* Slideshows (agents and listings) */
+.slideshow {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.slide {
+  display: none;
+  margin: 0;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 10px 14px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+.agents .slide {
+  text-align: center;
+}
+
+.agents img {
+  width: 170px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.agents figcaption {
+  font-weight: bold;
+}
+
+.listing img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.details {
+  margin: 0;
+  padding: 10px 14px;
+  list-style: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+video {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Forms */
+label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+label.inline {
+  display: inline-block;
+  margin-right: 16px;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+fieldset {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+button[type="submit"],
+.delete-review {
+  padding: 10px 20px;
+  font: inherit;
+  color: #fff;
+  background-color: var(--dark);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+.delete-review:hover {
+  background-color: var(--dark-hover);
+}
+
+.form-errors {
+  color: var(--error);
+}
+
+.form-success {
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* Mortgage calculator */
+.calculator {
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+#mortgage-result {
+  font-weight: bold;
+}
+
+/* Reviews */
+.note {
+  font-size: 0.9rem;
+  color: var(--dark-hover);
+}
+
+.review-item {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.review-item h3 {
+  margin: 0;
+}
+
+.stars {
+  margin: 4px 0;
+  color: #c98a00;
+}
+
+.delete-review {
+  padding: 6px 12px;
+}
+
+@media (max-width: 640px) {
+  .listing img {
+    height: 250px;
+  }
+}

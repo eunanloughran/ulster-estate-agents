@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ulster Estate Agents</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand">Ulster Estate Agents</a>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="properties-for-sale.html">Properties for Sale</a></li>
+            <li><a href="properties-for-rent.html">Properties for Rent</a></li>
+            <li><a href="land-for-sale.html">Land for Sale</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <h1>Welcome to Ulster Estate Agents</h1>
+    <p>Your local agent for homes, rentals and land across Northern Ireland. Our team will guide you
+        through every step of buying, renting or selling.</p>
+
+    <h2>Meet our agents</h2>
+    <div class="slideshow agents">
+        <figure class="slide">
+            <img src="img/tyler.webp" alt="Illustrated portrait of Tyler, sales agent">
+            <figcaption>Tyler</figcaption>
+        </figure>
+        <figure class="slide">
+            <img src="img/sarah.webp" alt="Illustrated portrait of Sarah, lettings agent">
+            <figcaption>Sarah</figcaption>
+        </figure>
+        <figure class="slide">
+            <img src="img/jim.jpg" alt="Illustrated portrait of Jim, land agent">
+            <figcaption>Jim</figcaption>
+        </figure>
+        <button type="button" class="slide-btn prev" aria-label="Previous">&#10094;</button>
+        <button type="button" class="slide-btn next" aria-label="Next">&#10095;</button>
+    </div>
+
+    <h2>Take a tour of one of our properties</h2>
+    <video controls muted playsinline preload="metadata" poster="img/house_tour_poster.jpg">
+        <source src="img/house_tour.mp4" type="video/mp4">
+        Your browser can't play this video.
+    </video>
+</main>
+
+<footer>&copy; Ulster Estate Agents. A demo site built with HTML, CSS and jQuery.</footer>
+
+</body>
+</html>

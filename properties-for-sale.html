@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties for Sale - Ulster Estate Agents</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand">Ulster Estate Agents</a>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties-for-sale.html" aria-current="page">Properties for Sale</a></li>
+            <li><a href="properties-for-rent.html">Properties for Rent</a></li>
+            <li><a href="land-for-sale.html">Land for Sale</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <h1>Properties for sale</h1>
+    <div class="slideshow listing">
+        <div class="slide">
+            <img src="img/house1.jpg" alt="Row of red-brick terraced houses with a For Sale sign">
+            <ul class="details">
+                <li>3 bedrooms, 2 bathrooms</li>
+                <li>Location: Belfast city centre</li>
+                <li>Price: £245,000</li>
+            </ul>
+        </div>
+        <div class="slide">
+            <img src="img/house2.jpg" alt="Detached white house with a garage, lawn and hedge">
+            <ul class="details">
+                <li>4 bedrooms, 3 bathrooms</li>
+                <li>Location: Lisburn</li>
+                <li>Price: £325,000</li>
+            </ul>
+        </div>
+        <div class="slide">
+            <img src="img/house3.jpg" alt="White bungalow by the sea at sunset">
+            <ul class="details">
+                <li>3 bedrooms, 2 bathrooms</li>
+                <li>Location: Portstewart</li>
+                <li>Price: £289,000</li>
+            </ul>
+        </div>
+        <button type="button" class="slide-btn prev" aria-label="Previous">&#10094;</button>
+        <button type="button" class="slide-btn next" aria-label="Next">&#10095;</button>
+    </div>
+
+    <section class="calculator" aria-labelledby="calc-heading">
+        <h2 id="calc-heading">Mortgage calculator</h2>
+        <form id="mortgage-form" novalidate>
+            <label for="loan-amount">Loan amount (£)</label>
+            <input type="number" id="loan-amount" min="1" step="any" placeholder="e.g. 200000" required>
+
+            <label for="interest-rate">Interest rate (%)</label>
+            <input type="number" id="interest-rate" min="0" step="any" placeholder="e.g. 4.5" required>
+
+            <label for="loan-term">Loan term (years)</label>
+            <input type="number" id="loan-term" min="1" max="40" step="1" placeholder="e.g. 25" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <p id="mortgage-result" role="status"></p>
+    </section>
+</main>
+
+<footer>&copy; Ulster Estate Agents. A demo site built with HTML, CSS and jQuery.</footer>
+
+</body>
+</html>

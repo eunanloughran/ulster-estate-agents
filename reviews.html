@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Ulster Estate Agents</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand">Ulster Estate Agents</a>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties-for-sale.html">Properties for Sale</a></li>
+            <li><a href="properties-for-rent.html">Properties for Rent</a></li>
+            <li><a href="land-for-sale.html">Land for Sale</a></li>
+            <li><a href="reviews.html" aria-current="page">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <h1>Reviews</h1>
+    <form id="review-form">
+        <label for="review-name">Your name</label>
+        <input type="text" id="review-name" required>
+
+        <label for="rating">Rating</label>
+        <select id="rating" required>
+            <option value="">Select a rating</option>
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+        </select>
+
+        <label for="comment">Your review</label>
+        <textarea id="comment" rows="4" required></textarea>
+
+        <button type="submit">Submit review</button>
+    </form>
+
+    <h2>What our customers say</h2>
+    <p class="note">Reviews are saved in your browser only.</p>
+    <div id="reviews-list"></div>
+</main>
+
+<footer>&copy; Ulster Estate Agents. A demo site built with HTML, CSS and jQuery.</footer>
+
+</body>
+</html>

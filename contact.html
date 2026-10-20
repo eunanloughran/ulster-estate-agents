@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ulster Estate Agents</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand">Ulster Estate Agents</a>
+    <nav aria-label="Main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties-for-sale.html">Properties for Sale</a></li>
+            <li><a href="properties-for-rent.html">Properties for Rent</a></li>
+            <li><a href="land-for-sale.html">Land for Sale</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <h1>Contact us</h1>
+    <form id="contact-form" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. 028 9012 3456">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <fieldset>
+            <legend>Preferred contact method</legend>
+            <label class="inline"><input type="radio" name="contact-preference" value="email"> Email</label>
+            <label class="inline"><input type="radio" name="contact-preference" value="phone"> Phone</label>
+        </fieldset>
+
+        <label for="property-interest">Interested in</label>
+        <select id="property-interest" name="property-interest">
+            <option value="">Select an option</option>
+            <option value="buy">Buying a property</option>
+            <option value="rent">Renting a property</option>
+            <option value="land">Buying land</option>
+        </select>
+
+        <ul id="form-errors" class="form-errors" role="alert"></ul>
+        <p id="form-success" class="form-success" role="status"></p>
+
+        <button type="submit">Send</button>
+    </form>
+</main>
+
+<footer>&copy; Ulster Estate Agents. A demo site built with HTML, CSS and jQuery.</footer>
+
+</body>
+</html>
